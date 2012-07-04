@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ClassicInstruments::Application.routes.draw do
   get "welcome/home"
 
@@ -6,6 +7,9 @@ ClassicInstruments::Application.routes.draw do
   get "welcome/thank_you"
   get "welcome/register"
 
+=======
+WoodwindShop::Application.routes.draw do
+>>>>>>> 7d71b6045d58a6da0fdc863074ae471c89c3dde4
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,7 +59,11 @@ ClassicInstruments::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+<<<<<<< HEAD
   root :to => "welcome", :action => "home"
+=======
+  # root :to => "welcome#index"
+>>>>>>> 7d71b6045d58a6da0fdc863074ae471c89c3dde4
 
   # See how all your routes lay out with "rake routes"
 
