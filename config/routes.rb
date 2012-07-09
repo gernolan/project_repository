@@ -1,10 +1,16 @@
 ClassicInstruments::Application.routes.draw do
-  get "welcome/home"
+  get "users/new"
 
-  resources :products
-  
+  get "welcome/home"
   get "welcome/thank_you"
   get "welcome/register"
+
+  resources :products
+  resources :users
+  resources :sessions
+
+  match '/login' => "sessions#new", :as => "login"
+  match '/logout' => "sessions#destroy", :as => "logout"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
