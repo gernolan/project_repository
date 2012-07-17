@@ -12,4 +12,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.find(:all)
+  end
+
+
 end

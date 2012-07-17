@@ -2,8 +2,11 @@
 
 <h2>Your Cart</h2>
 <ul>
-<% for item in @cart.line_items %>
-    <li><%= item.quantity %> &times; <%=
-	item.product.name %></li>
-<% end %>
+  <% for item in @cart.line_items %>
+      <li><%= item.quantity %> &times; <%= item.product.name %></li>
+  <% end %><br/>
+  Total Price: <%= number_to_currency(@cart.total_price, :unit => '&euro;') %>
+  <br/>
+  <br/>
+  <%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
 </ul>	
